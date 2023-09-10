@@ -1,0 +1,54 @@
+{"intents":[
+    {"tag":["opening"],
+    "patterns":["hi","hello","how are you?","hey","howdy","what's up?","good day","good morning","good evening","I have a doubt","I have a query"],
+    "responses":["Hello! How may I help you today?","Hi! How may I assist you today?","I'm here to help you with any queries!"]
+    },
+{"tag":["closure"],
+    "patterns":["bye","see you","Thanks","Thank you","Great help","Understood"],
+    "responses":["Glad to help you!","Feel free to ask your queries!","Hope your queries are answered!"]
+    },
+{"tag":["registration"],
+    "patterns":["When is the last date to register?","What is the registration deadline?","Registration details"],
+    "responses":["Registration starts on 26-08-2023 and ends on 26-08-2023. Hurry up! Register now!"]
+    },
+{"tag":["organizer_info"],
+    "patterns":["Tell me about the organizers","Who are the event organizers?","Organizer details"],
+    "responses":["The hackathon is organized by IE Student Chapter and CSI Student Chapter. They are dedicated to making this event a success."]
+    },
+{"tag":["round_info"],
+    "patterns":["What happens in the opening round?","Tell me more about the rounds","Round details"],
+    "responses":["The opening round of the hackathon is on August 28, 2023. Stay tuned for challenges and exciting tasks that await participants!"]
+    },
+{"tag":["announcement_info"],
+    "patterns":["What were the announcements?","Tell me about any announcements made","Announcement details"],
+    "responses":["There have been two announcements so far. The first announcement is: 'This is the first announcement!' and the second one is: 'This is the second announcement.'"]
+    },
+{"tag":["next_round_info"],
+    "patterns":["What's happening on September 1st?","Tell me about the second round","Next round details"],
+    "responses":["The second round of the hackathon is scheduled for September 1, 2023. Get ready for more challenges and opportunities!"]
+    },
+{"tag":["upcoming_round_info"],
+    "patterns":["What can you tell me about the upcoming round on September 8th?","Any details on the next round?","Upcoming round information"],
+    "responses":["The next round of the hackathon is on September 8, 2023. Stay tuned for updates and prepare for the competition ahead!"]
+    },
+    {"tag":["hackathon_info"],
+    "patterns":["Tell me about the Hackathon Contest 2023","What is the Hackathon Contest 2023?","Hackathon details"],
+    "responses":["Thiagarajar College of Engineering proudly presents HACKATHON CONTEST 2023.It is a 24-hour long hackathon event where thousands of students from all over India collaborate to work on different problem statements to give an obliging solution.Ignite your creativity! Register today and hack your way to victory!"]
+    },
+    {"tag":["who_can_participate"],
+    "patterns":["Who can participate in the Hackathon Contest?","Eligibility criteria","Who is eligible to participate?"],
+    "responses":["It is open to all undergraduate students from all colleges across India."]
+    },
+{"tag":["participation_fee"],
+    "patterns":["How much is the participation fee for the Hackathon Contest?","Is there any participation fee?","How much is the fees"],
+    "responses":["Participation is absolutely free inclusive of resources."]
+    },
+{"tag":["team_size"],
+    "patterns":["What is the team size required to participate in the Hackathon Contest?","Teamsize","Team size for Hackathon","How many members can be in a team?"],
+    "responses":["A team of 3 is required to participate."]
+    },
+{"tag":["mode_of_conduct"],
+    "patterns":["Will the Hackathon Contest be conducted in person or online?","Online or offline mode?","Where is it happening?"],
+    "responses":["This year it will be conducted in offline mode at TCE Campus, Madurai."]
+    }
+]}

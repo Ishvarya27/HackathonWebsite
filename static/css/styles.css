@@ -1,0 +1,589 @@
+/* @import url("https://fonts.google.com/specimen/Itim"); */
+
+*{
+  font-family: Itim;
+}
+body{
+    margin: 0px;
+    background: linear-gradient(125deg, black, black, rgb(0, 76, 60),black,black,rgb(0, 76, 60),black,black);
+    color: #fff;
+    font-family: Poppins,sans-serif;
+
+}
+
+
+/* navbar */
+nav{
+  display:flex;
+  padding:0% 0%;
+  justify-content:space-between;
+  align-items: center;
+}
+.nav-links{
+  flex:1;
+  text-align:right;
+  
+}
+.nav-links ul li{
+  list-style:none;
+  display:inline-block;
+  padding:0% 1%;
+  margin-top: -30% ;
+  position:relative;
+}
+.nav-links ul li a{
+  color: hsla(160, 100%, 50%, 0.368);
+  text-decoration: none;
+}
+nav img{
+  width:6%;
+  height:6%;
+
+}
+/* .nav-top{
+  background-color: rgb(5, 5, 5);
+
+} */
+.nav-links ul li:hover{
+  text-shadow: 5px 5px 15px #00ffc8c4;
+}
+/* register */
+.register {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  margin-top: 0vw;
+  margin-right: 10vw;
+  margin-bottom: 23vw;
+}
+/* changed */
+#registerButton {
+    height: 5vw;
+    width: 15vw;
+    color: #fff;
+    font-size: 2.5vw;
+    font-weight: 400;
+    margin: 4vw;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #02b5917d;
+    border-radius: 50vw;
+
+}
+#registerButton:hover {
+  background: #00f3aeb2;
+  color: black;
+  box-shadow: 2px 2px 5px inset rgba(255, 255, 255, 0.242);
+
+}
+/* front page */
+.heroslider{
+  height: 50vw;
+  display: flex;
+  /* background-image: url("/images/1926381.jpg");
+  background-size: 150vw 100vw; */
+}
+
+
+/* .heroslider:after {
+  content:""; 
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(163, 154, 154, 0) 0%,rgba(18, 67, 67, 0.642) 100%);
+  height: 40%;  
+} */
+/* .heroslider img{
+  width: 90%;
+}*/
+.texttitle1 h1{
+
+    font-size: 10vw;
+    color: hsla(160, 100%, 50%, 0.515);
+    margin-left: 5vw;
+    margin-right: 10vw;
+    margin-bottom: 0vw;
+    margin-top: 5vw;
+
+} 
+.texttitle1 h4{
+  font-family: 'Pacifico', cursive;
+  font-size: 3vw;
+  color: #f7f1f380;
+  text-align: center;
+  margin-left: 3vw;
+  animation:glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from{
+    text-shadow: 0 0 20px #17e8914a;
+  }
+  to{
+    text-shadow: 0 0 30px #01f9af81,0 0 10px #01ffb3;
+  }
+}
+
+
+.intro p{
+  font-size: 2.3vw;
+  text-align: justify;
+  /*border: 2px solid rgba(255, 255, 255, 0.308);*/
+  padding: 2vw;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+}
+.intro h2{
+  font-size: 3vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.774);
+}
+
+/* Clubs*/
+
+.club{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.ins{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.club img{
+  width: 20vw;
+  height: 20vw;
+}
+
+.club h3{
+  font-size: 3vw;
+  text-align: center;
+}
+.h2lone{
+  font-size: 5vw;
+  text-align: center;
+}
+/*faq*/
+.accordion{
+  background-color: rgba(156, 155, 155, 0.137);
+  color: #e7e7e7;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 14px;
+  transition: 0.5s;
+}
+
+.active, .accordion:hover{
+  background-color: hsla(160, 100%, 30%, 0.804);
+  color: #fff;
+}
+
+.accordion:after{
+  content: '\002B';
+  color: rgba(28, 1, 59, 0.498);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after{
+  content: "\2212";
+  color: hsla(160, 100%, 50%, 0.635);
+}
+
+.panel{
+  padding: 0 8px;
+  font-size: 13px;
+  color: #3cd787;
+  background-color: hsla(160, 44%, 45%, 0.249);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* timeline */
+.dates{
+  margin:0;
+  padding: 4vw;
+  margin-left: 3vw;
+}
+.dates::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: fixed;
+
+}
+.checkpoint{
+  max-width: 37vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  position: relative;
+  color: #fff;
+  
+}
+
+.checkpoint div{
+  padding-left: 3vw;
+  text-align: center;
+  border: 2vw solid #00000048;
+  border-radius: 1vw;
+  background: linear-gradient(135deg, #006239, #019a5d, #01714cb3);
+}
+
+.checkpoint p{
+  line-height: 1vw;
+  color: rgb(234, 232, 239);
+  font-size: 3vw;
+}
+.checkpoint:nth-child(odd) {
+  border-left: 0.7vw solid #888;
+  padding-left: 1vw;
+  transform: translateX(40vw);
+}
+.checkpoint:nth-child(even) {
+  border-right: 0.7vw solid #888;
+  padding-right: 1vw;
+  transform: translateX(2vw);
+}
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before{
+  content: "";
+  background: #ffffff;
+  width: 0.3vw;
+  height: 4vw;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+.checkpoint:nth-child(even)::before{
+  right: 0;
+}
+.checkpoint:nth-child(odd)::before{
+  left: 0;
+}
+
+/* location */
+.location{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5vw;
+}
+
+/* contact */
+.contact-no{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact{
+  background-color: rgba(83, 161, 115, 0.5);
+  width: 30vw;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  font-style: italic;
+  border-radius: 5vw;
+  
+ 
+ }
+ .contact-no img{
+   width: 15vw;
+ }
+ h3{
+  font-size: 5vw;
+  text-align: center;
+}
+
+
+ :root {
+  --color-primary: hsl(310, 100%, 65%);
+  --color-secondary: hsl(160, 100%, 65%);
+  --background: hsl(230, 30%, 15%);
+  --text: hsl(310, 100%, 95%);
+}
+
+
+blockquote {
+
+
+  padding: 2vw 2vw 2vw 2vw;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    35deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+}
+
+/* chatbot */
+
+
+#chatbot-widget{
+  margin-left: 81vw;
+  margin-top: -21.5vw;
+  position: absolute;
+}
+
+#chatbot-widget h1{
+  font-size:2vw;
+}
+.chatbot-container {
+  width: 15vw;
+  margin: 0;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 1vw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 18vw;
+}
+
+#chatbot {
+  background-color: #f5f5f5;
+  border: 1px solid #eef1f5;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+#header {
+  background-color: darkslategrey;
+  color: #ffffff;
+  font-size: 1vw;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  border-radius: 50vw;
+}
+h1{
+  margin: 0;
+}
+message-container {
+  background: #ffffff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 0vw;
+  border-radius: 50vw;
+}
+
+
+#conversation {
+  height: 11vw;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+@keyframes message-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chatbot-message {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  font-size: 1vw;
+  line-height: 1.1vw;
+  border-radius: 10vw;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: 100%;
+  padding: 0 15px;
+  height: 11vw;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+
+.chatbot-text {
+  background-color: white;
+  color: #333333;
+  font-size: 1.1vw;
+  padding: 0.5vw;
+  border-radius: 1vw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10vw;
+}
+
+#input-form {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #eef1f5;
+  height: 0vw;
+}
+
+#input-field {
+  flex: 1;
+  height: 2vw;
+  border: 1px solid #eef1f5;
+  border-radius: 1vw;
+  padding: 0 0.5vw;
+  font-size: 1vw;
+  transition: border-color 0.3s;
+  background: #ffffff;
+  color: #333333;
+  border: none;
+  margin-left: 1vw;
+  margin-top: 1vw;
+}
+
+.send-icon {
+  margin-right: 10px;
+  cursor: pointer;
+  width: 1vw;
+  margin-top: 1.5vw;
+}
+
+#input-field:focus {
+  border-color: #333333;
+  outline: none;
+}
+
+#submit-button {
+  background-color: transparent;
+  border: none;
+}
+
+p[sentTime]:hover::after {    
+  content: attr(sentTime);
+  position: absolute;
+  top: -3px;
+  font-size: 14px;
+  color: gray;
+}
+
+.chatbot p[sentTime]:hover::after {  
+  left: 15px;
+}
+
+.user-message p[sentTime]:hover::after {  
+  right: 15px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+/* Style for the container */
+.container {
+  position: relative; /* Required for absolute positioning */
+  height: 1vw; /* Set a fixed height for the container */
+  /* border: 1px solid #ccc; Just for demonstration */
+}
+
+/* Style for the button and chat icon */
+#chatIcon {
+  position: absolute;
+  bottom: 1vw; /* Adjust this value to control the vertical position */
+/* Center horizontally */
+   right: -7vw;
+  transform: translateX(-50%); /* Center horizontally */
+}
+.container .logochat{
+  width: 2.8vw;
+  height: 2.7vw;
+  padding: 0;
+  position: fixed;
+}
+
+#chatIcon{
+  border-radius: 50vw;
+}
+
+
+#about {
+  margin-top: 10vw;
+  margin: 0;
+}
+.home{
+  width: 100%;
+  height: 100%;
+ }
+
+ .a-wrap{
+   overflow: hidden;/*//To hide scroll bar */
+   background: linear-gradient(125deg,rgba(0, 128, 77, 0.256), rgba(0, 255, 225, 0.242), rgba(1, 105, 79, 0.26));
+ }
+ .a-move{
+  display: flex;   
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+
+ }
+ .a-item{
+  flex-shrink: 0;
+  text-align: center;
+  width: 30%;
+  box-sizing: border-box;
+ }
+ 
+
+
+ @keyframes tickerh{
+  0%{
+    transform: translate3d(80%,0,0);
+  }
+  100%{
+    transform: translate3d(-90%,0,0);
+  }
+ }
+ .a-move{
+    animation: tickerh linear 10s infinite;
+ }
+ .a-move:hover { animation-play-state: paused; }
+ @media only screen and (max-width: 768px) {
+  .a-move { 
+    animation-duration: 20s;
+   }
+}
+
+
+
+
+

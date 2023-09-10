@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title id="title"></title>
+
+        <style>
+          .tracks-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+          }
+          .tracks-container > div{
+            width: 300px;
+            margin: 0px;
+            padding: 5px;
+            background-color: rgba(156, 155, 155, 0.137) ;
+          }
+          /* .tracks-container > div img{
+            width: 300px;
+          } */
+          .tracks-container > div > div> h5{
+            font-weight: bolder;
+            color: rgb(255, 255, 255);
+          }
+
+        </style>
+
+    </head>
+
+    <script>
+      fetch('https://web-it-like-spider.onrender.com/hackathon/home/',{
+        method:'GET',
+      }).then(response => response.json())
+          .then(data=> {
+            document.getElementById('texttitle').innerHTML=data.name;
+            document.getElementById('contact').innerHTML=data.contact_number;
+            document.getElementById('hack_start').innerHTML=data.start_date;
+            document.getElementById('hack_end').innerHTML=data.end_date;
+            document.getElementById('reg_start').innerHTML=data.registration_start_date;
+            document.getElementById('reg_end').innerHTML=data.registration_end_date;
+            document.getElementById('ieChapter').innerHTML=data.organizers[0].organizer_info;
+            document.getElementById('csiChapter').innerHTML=data.organizers[1].organizer_info;
+            document.getElementById('announce-2').innerHTML=data.announcements[1].announcement_text;
+            document.getElementById('announce-1').innerHTML=data.announcements[0].announcement_text;
+            const [round1, round2,round3] = data.rounds;
+            document.getElementById('round1-no').innerHTML = round1.round_number;
+            document.getElementById('round2-no').innerHTML = round2.round_number;
+            document.getElementById('round3-no').innerHTML = round3.round_number;
+            document.getElementById('round1-date').innerHTML = round1.round_date;
+            document.getElementById('round2-date').innerHTML = round2.round_date;
+            document.getElementById('round3-date').innerHTML = round3.round_date;
+
+        
+
+          })
+    </script>
+
+
+    <body>
+        <section class="nav-top">
+        
+            <nav>
+                <a href="frontend.html"></a>
+                <img src="{{ url_for('static', filename='images/tce_logo.png') }}" alt="">
+                <div class="nav-links">
+                    
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#track">Track</a></li>
+                        <li><a href="#clubs">Clubs</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+            
+                    </ul>
+                </div>
+            </nav>
+          </section>
+    
+
+
+
+
+
+      <!--front cover-->
+      <section id="home">
+      <div class="heroslider">
+       <!-- <div class="img">
+          <img src="/images/SeekPng.com_computer-vector-png_2315426.png">   
+        </div>-->
+   
+        <div class="texttitle1">
+          <h1 id="texttitle"></h1>
+          <br>
+          <h4>Ignite your creativity!
+          Register today and hack your way to VICTORY!</h4>
+        </div> 
+        <div class = "register"> 
+          <button id="registerButton">Register</button>
+          <div class="container">
+            <!-- Content goes here -->
+            <button id="chatIcon">
+              <img class="logochat" src="{{ url_for('static', filename='images/1691600708messenger-logo-png.png') }}" alt="Chat Icon" />
+            </button>
+          </div>
+          
+        </div>              
+      </div>
+
+      <div id="chatbot-widget" style="display: none;">
+        <div class="chatbot-container">
+          <div id="header">
+              <h1>Chatbot</h1>
+          </div>
+          <div id="chatbot">
+              <div id="conversation">
+                <div class="chatbot-message">
+                  <p class="chatbot-text">Hi! Welcome to TCE Hackathon!</p>
+                </div>
+              </div>
+              <form id="input-form">
+                <message-container>
+                  <input id="input-field" type="text" placeholder="Type your message here">
+                  <button id="submit-button" type="submit">
+                    <img class="send-icon" src="{{ url_for('static', filename='images/send-message.jpg') }}" alt="">
+                  </button>
+                </message-container>
+                  
+              </form>
+              <div>
+        </div>  
+  
+      </div>
+  
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+      
+      </section>
+
+
+
+      <!--about-->
+
+      <section id="about">
+      <h2 class="h2lone">ABOUT</h2>
+      <div class="intro">
+      <blockquote>
+        <p>Thiagarajar College of Engineering proudly presents <b>HACKATHON CONTEST 2023</b>. A 24-hour Hackathon where students from all over the state come together and work on different problem statements. Problem statements include both software and electronic tracks. This serves as a golden opportunity to test your skills against the best fellow contenders for cash prizes and more! Participants will be building projects from scratch which will be evaluated by our panel of experienced judges to decide the final winners.</p>
+      </blockquote>
+      </div>
+      <div class="a-wrap">
+        <div class="a-move">
+          <div class="a-item" id="announce-1"></div>
+          <div class="a-item" id="announce-2"></div>
+        </div>
+      </div>
+      </section>
+
+      <!--register---->
+      <section class="location">
+
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.6209038198226!2d78.07936421422974!3d9.882137377765295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c58f98cfb84d%3A0x29f51efea3e84bf2!2sThiagarajar%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1663528295126!5m2!1sen!2sin"  
+        style="border:0;"
+        loading="lazy"
+        width="200vw" 
+        height="200vw"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+
+    <!--timeline-->
+
+
+    <h2 class="h2lone">SAVE THE DATE</h2>
+    <section id="timeline" class="dates">
+      <div class="timeline">
+        <div class="checkpoint">
+          <div>
+           <h2>Registration Starts By</h2>
+           <p id="reg_start"></p>
+          </div>
+        </div>
+        <div class="checkpoint">
+          <div>
+           <h2>Registration Ends By</h2>
+           <p id="reg_end"></p>
+          </div>
+        </div>
+        <div class="checkpoint">
+          <div>
+           <h2>Start Hacking </h2>
+           <p id="hack_start"></p>
+          </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+             <h2 id="round1-no"></h2>
+             <p id="round1-date"></p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+             <h2 id="round2-no"></h2>
+             <p id="round2-date"></p>
+            </div>
+        </div>
+        <div class="checkpoint">
+            <div>
+             <h2 id="round3-no"></h2>
+             <p id="round3-date"></p>
+            </div>
+        </div>
+        <div class="checkpoint">
+          <div>
+           <h2>Wind Up</h2>
+           <p id="hack_end"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+<br><br>
+    <section id="track">
+      <h2 class="h2lone">TRACKS</h2>
+<br><br>
+      <!--Track-->
+      <div class="tracks-container">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/devlopment.jpg') }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Development</h5>
+            <p class="card-text" style="color: rgb(110, 110, 110);">A track to develop Websites and Mobile Apps based on the problem statements we have for you, in line with the theme.Generate creative ideas and solutions for addressing each problem statement.</p>
+            <a href="https://www.techtarget.com/searchcloudcomputing/definition/web-application-development" class="btn btn-dark" style="background-color: rgba(0, 167, 112, 0.349);">Know More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/blockchain.jpg') }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Blockchain</h5>
+            <p class="card-text" style="color: rgb(110, 110, 110);">This track is for Web3 enthusiasts to turn ideas into actual projects. Opportunity to work on blockchain-based problem statements focussing on different areas across NFTs, DeFi to pursue a more sustainable future.</p>
+            <a href="https://en.wikipedia.org/wiki/Blockchain" class="btn btn-dark" style="background-color: rgba(0, 167, 112, 0.349);">Know More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/iot.jpg') }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">IOT</h5>
+            <p class="card-text" style="color: rgb(110, 110, 110);">This track is for IOT enthusiasts to turn their ideas into reality.Ready to connect with sensors, software, and other technologies to connect and exchange data with other devices or systems over the internet.</p>
+            <a href="https://www.techtarget.com/iotagenda/definition/Internet-of-Things-IoT" class="btn btn-dark" style="background-color: rgba(0, 167, 112, 0.349);">Know More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/ml.jpg') }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">AI/ML</h5>
+            <p class="card-text" style="color: rgb(110, 110, 110);">A track for all ML enthusiasts out there. It brings together participants to solve real-data challenges based on Sustainability by applying Machine learning. It aims to bring to life creative solutions to leverage the power of AI to amplify human capability.</p>
+            <a href="https://www.techtarget.com/searchenterpriseai/definition/machine-learning-ML" class="btn btn-dark" style="background-color: rgba(0, 167, 112, 0.349);">Know More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--clubs-->
+
+<br><br>
+        <h2 class="h2lone">ORGANIZERS</h2>
+        <br>
+        <div id="clubs" class="club">
+          
+          <div class="csi">
+              <h3 id="csiChapter"></h3>
+              <img src="{{ url_for('static', filename='images/csilogo.png') }}" class="ins">
+
+          </div>
+          <br>
+          <div class="ie">
+            <h3 id="ieChapter"></h3>
+            <img src="{{ url_for('static', filename='images/1200px-Institution_of_Engineers_(India)_Logo.svg.png') }}" class="ins">
+
+        </div>
+        </div>
+
+    <!--contacts-->
+<br><br>
+    <section class="contact">
+      <h3>Any Queries</h3>
+      <div class="contact-no">       
+        <div id="contact"></div>
+        <img src="{{ url_for('static', filename='images/contact1.png') }}" alt="contact">
+      </div>
+    </section>
+      <br>
+      <hr size="2">
+      <br>
+
+    <!--faq-->
+
+    <section id="faq">
+      <h2 class="h2lone">FAQ</h2>
+      <button class="accordion">What is Hackathon Contest?</button>
+      <div class="panel">
+        <p>Hackathon Contest is a 24-hour long hackathon event where thousands of students from all over India collaborate to work on different problem statements to give an obliging solution.</p>
+      </div>
+      <button class="accordion">Who can participate?</button>
+      <div class="panel">
+        <p>It is open to all undergraduate students from all colleges across India.</p>
+      </div>
+      <button class="accordion">How much is the participation fee?</button>
+      <div class="panel">
+        <p>Participation is absolutely free inclusive of resources.</p>
+      </div>
+      <button class="accordion">What is the team size to participate in the Hackathon Contest?</button>
+      <div class="panel">
+        <p>A team of 3 is required to participate.</p>
+      </div>
+      <button class="accordion">Will it be conducted in person or in online?</button>
+      <div class="panel">
+        <p>This year it will be conducted in offline mode in TCE Campus, Madurai.</p>
+      </div>
+    </section>
+
+    <script>
+      
+        const registerButton = document.getElementById("registerButton");
+        registerButton.addEventListener("click", function () {
+          window.location.href = "/register";
+        });
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for(i=0;i<acc.length;i++)
+        {
+          acc[i].addEventListener("click", function(){
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if(panel.style.maxHeight)
+            {
+              panel.style.maxHeight=null;
+            }
+            else
+            {
+              panel.style.maxHeight=panel.scrollHeight+"px";
+            }
+          });
+        }
+        
+        const chatIcon = document.getElementById('chatIcon');
+  const chatbotWidget = document.getElementById('chatbot-widget');
+
+  // Add a click event listener to the chat icon
+  chatIcon.addEventListener('click', () => {
+    // Toggle the display of the chatbot widget
+    chatbotWidget.style.display = chatbotWidget.style.display === 'none' ? 'block' : 'none';
+  });
+
+    </script>  
+          
+    </body>
+</html>

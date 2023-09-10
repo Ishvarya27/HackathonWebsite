@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Registration Form</header>
+      <form action="frontend.html" class="form" id="form">
+        <div class="input-box">
+          <label>Team Name</label>
+          <input type="text" placeholder="Enter team name" id="tname" required />
+        </div>
+
+        <!--member 1-->
+        <div class="input-box">
+            <label>Member 1 Name</label>
+            <input type="text" placeholder="Enter name" id="m1name" required />
+        </div>
+        <div class="input-box">
+          <label>Member 1 Register Number</label>
+          <input type="text" placeholder="Enter regno" id="m1regno" required />
+      </div>
+        <div class="select-box">
+            <select id="m1dept">
+              <option hidden>Member 1 Department</option>
+              <option>CSE</option>
+              <option>IT</option>
+              <option>CSBS</option>
+              <option>ECE</option>
+              <option>EEE</option>
+              <option>MECH</option>
+              <option>MECT</option>
+              <option>CIVIL</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label>Member 1 Phone Number</label>
+            <input type="number" placeholder="Enter phone number" id="m1pno" required />
+          </div>
+          <div class="input-box">
+            <label>Member 1 Email Address</label>
+            <input type="text" placeholder="Enter email address" id="m1mail" required />
+          </div>
+
+        
+          <!--member 2-->
+        <div class="input-box">
+            <label>Member 2 Name</label>
+            <input type="text" placeholder="Enter name" id="m2name" required />
+        </div>
+        <div class="input-box">
+          <label>Member 2 Register Number</label>
+          <input type="text" placeholder="Enter regno" id="m2regno" required />
+      </div>
+        <div class="select-box">
+            <select id="m2dept">
+              <option hidden>Member 2 Department</option>
+              <option>CSE</option>
+              <option>IT</option>
+              <option>CSBS</option>
+              <option>ECE</option>
+              <option>EEE</option>
+              <option>MECH</option>
+              <option>MECT</option>
+              <option>CIVIL</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label>Member 2 Phone Number</label>
+            <input type="number" placeholder="Enter phone number" id="m2pno" required />
+          </div>
+          <div class="input-box">
+            <label>Member 2 Email Address</label>
+            <input type="text" placeholder="Enter email address" id="m2mail" required />
+          </div>
+
+          <!--member 3-->
+          <div class="input-box">
+            <label>Member 3 Name</label>
+            <input type="text" placeholder="Enter name" id="m3name" required />
+        </div>
+        <div class="input-box">
+          <label>Member 3 Register Number</label>
+          <input type="text" placeholder="Enter regno" id="m3regno" required />
+      </div>
+        <div class="select-box">
+            <select id="m3dept">
+              <option hidden>Member 3 Department</option>
+              <option>CSE</option>
+              <option>IT</option>
+              <option>CSBS</option>
+              <option>ECE</option>
+              <option>EEE</option>
+              <option>MECH</option>
+              <option>MECT</option>
+              <option>CIVIL</option>
+            </select>
+        </div>
+        <div class="input-box">
+            <label>Member 3 Phone Number</label>
+            <input type="number" placeholder="Enter phone number" id="m3pno" required />
+        </div>
+        <div class="input-box">
+            <label>Member 3 Email Address</label>
+            <input type="text" placeholder="Enter email address" id="m3mail" required />
+        </div>
+        <button>Submit</button>
+      </form>
+    </section>
+    
+  </body>
+  <script>
+    var form = document.getElementById('form')
+
+      form.addEventListener('submit', function(e){
+
+      e.preventDefault()
+
+      var tname = document.getElementById('tname').value
+      
+      var m1name = document.getElementById('m1name').value
+      var m1regno = document.getElementById('m1regno').value
+      var m1dept = document.getElementById('m1dept').value
+      var m1pno = document.getElementById('m1pno').value
+      var m1mail = document.getElementById('m1mail').value
+
+      var m2name = document.getElementById('m2name').value
+      var m2regno = document.getElementById('m2regno').value
+      var m2dept = document.getElementById('m2dept').value
+      var m2pno = document.getElementById('m2pno').value
+      var m2mail = document.getElementById('m2mail').value
+
+      var m3name = document.getElementById('m3name').value
+      var m3regno = document.getElementById('m3regno').value
+      var m3dept = document.getElementById('m3dept').value
+      var m3pno = document.getElementById('m3pno').value
+      var m3mail = document.getElementById('m3mail').value
+
+      const dataset = {
+                "team_name": tname,
+                "team_member_1_name":  m1name,
+                "team_member_1_department": m1dept,
+                "team_member_1_phone": m1pno,
+                "team_member_1_email": m1mail,
+                "team_member_1_register_number": m1regno,
+                "team_member_2_name": m2name,
+                "team_member_2_department": m2dept ,
+                "team_member_2_phone": m2pno,
+                "team_member_2_email":m2mail,
+                "team_member_2_register_number": m2regno,
+                "team_member_3_name": m3name,
+                "team_member_3_department": m3dept,
+                "team_member_3_phone": m3pno,
+                "team_member_3_email":m3mail,  
+                "team_member_3_register_number": m3regno,
+            };
+
+      fetch("https://web-it-like-spider.onrender.com/hackathon/register/",{
+        method: "POST",
+        headers: {
+                'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataset)
+      })
+      .then(response=>response.text())
+            .then(result=>{
+              var jsonString = result;
+              var jsonObject = JSON.parse(jsonString);
+              var successMessage = jsonObject.success;
+              var errorMessage = jsonObject.error;
+              
+              if(successMessage === "Registration successful!"){
+                alert(successMessage);
+                window.location.href="/";
+              }
+              else{
+              alert(errorMessage);
+
+            }            
+            })
+           
+            .catch(error => {
+                console.error('Error:', error);
+            });
+          });
+  </script>
+</html>
